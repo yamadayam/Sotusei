@@ -14,7 +14,7 @@ namespace ConsoleApp1 {
 
             Task<string> webTask = GetWebPageAsync(webUri);
             webTask.Wait(); // Mainメソッドではawaitできないので、処理が完了するまで待機する
-            string result = webTask.Result;
+            string result = webTask.Result; 
 
             //if (result != null) {
             //    // サンプルとして、取得したHTMLデータの<h1>タグ以降を一定長だけ表示
