@@ -7,7 +7,7 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="400"
       Title="AcPage" Loaded="Page_Loaded">
-    
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
@@ -23,6 +23,6 @@
 
         <TextBlock Grid.Row="1" Text="Name" Margin="20" HorizontalAlignment="Center" FontSize="20"/>
         <TextBox x:Name="tbname" Grid.Row="1" Grid.Column="1" Margin="10,10,10,-240" />
-        <TextBox x:Name="tbanswer" Grid.Row="1" Grid.Column="1" VerticalAlignment="Bottom" Margin="10,0,10,-319" Height="49" />
+        <Button x:Name="btapi" Grid.Row="1" Grid.Column="0" Margin="10,0,10,-88" VerticalAlignment="Bottom" Height="48" Click="btapi_Click"/>
     </Grid>
 </Page>
