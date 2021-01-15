@@ -12,18 +12,14 @@ using System.Web.Script.Serialization;
 namespace ConsoleApp1 {
     class Program {
         static void Main(string[] args) {
-            
+            var consumerkey = "84578F8035947FB06BFC5FB9E4902701";
+            var userid = "76561199051966013";
+            var api = new steam(consumerkey, userid);
 
-            //Uri webUri = new Uri("https://api.steampowered.com/ISteamApps/GetAppList/v2/");
+            var userInformation = api.GetUserInformation();
+            Console.WriteLine(api.Json);
 
-            //Task<string> webTask = GetWebPageAsync(webUri);
-            //webTask.Wait(); // Mainメソッドではawaitできないので、処理が完了するまで待機する
-            //string result = webTask.Result;
-            //Console.WriteLine(result);
-
-            //var wc = new WebClient();
-            //var html = wc.DownloadString("https://api.steampowered.com/ISteamApps/GetAppList/v2/");
-            //Console.WriteLine(html);
+            var q = userInformation.Select(s => s.Personaname);
 
 
         }

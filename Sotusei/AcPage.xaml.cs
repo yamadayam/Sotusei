@@ -35,7 +35,7 @@ namespace Sotusei {
             var userInformation = api.GetUserInformation();
             tbname.Text = api.Json;
 
-            var q = userInformation.Select(s => s.Name);
+            var q = userInformation.Select(s => s.Personaname);
 
         }
     }
