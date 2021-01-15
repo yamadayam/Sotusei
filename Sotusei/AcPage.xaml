@@ -6,8 +6,8 @@
       xmlns:local="clr-namespace:Sotusei"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="400"
-      Title="AcPage">
-
+      Title="AcPage" Loaded="Page_Loaded">
+    
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
@@ -17,11 +17,12 @@
             <ColumnDefinition Width="200*"/>
             <ColumnDefinition Width="300*"/>
         </Grid.ColumnDefinitions>
-        
+
         <TextBlock Grid.Row="0" HorizontalAlignment="Left" Margin="5" TextWrapping="Wrap"
                    FontSize="30" Text="Account" />
 
         <TextBlock Grid.Row="1" Text="Name" Margin="20" HorizontalAlignment="Center" FontSize="20"/>
-        <TextBox Grid.Row="1" Grid.Column="1" Margin="10" />
+        <TextBox x:Name="tbname" Grid.Row="1" Grid.Column="1" Margin="10,10,10,-240" />
+        <TextBox x:Name="tbanswer" Grid.Row="1" Grid.Column="1" VerticalAlignment="Bottom" Margin="10,0,10,-319" Height="49" />
     </Grid>
 </Page>
