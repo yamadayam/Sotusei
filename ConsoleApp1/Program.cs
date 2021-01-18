@@ -19,8 +19,9 @@ namespace ConsoleApp1 {
             var userInformation = api.GetUserInformation();
             Console.WriteLine(api.Json);
 
-            var q = userInformation.Select(s => s.Personaname);
-
+            foreach (var item in userInformation) {
+                Console.WriteLine(item.steamid);
+            }
 
         }
         //static async Task<string> GetWebPageAsync(Uri uri) {

@@ -1,52 +1,61 @@
 ﻿using Newtonsoft.Json;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ConsoleApp1 {
-    class UserInformation {
+
+    public partial class JsonModel {
+        [JsonProperty("response")]
+        public Response Response { get; set; }
+    }
+
+    public partial class Response {
+        [JsonProperty("players")]
+        public List<Player> Players { get; set; }
+    }
+
+    public class Player {
         [JsonProperty("@steamid")]
-        public string Steamid { get; set; }
+        public string steamid { get; set; }
 
         [JsonProperty("@communityvisibilitystate")]
-        public string Communityvisibilitystate { get; set; }
+        public int communityvisibilitystate { get; set; }
 
         [JsonProperty("@profilestate")]
-        public string Profilestate { get; set; }
+        public int profilestate { get; set; }
 
         [JsonProperty("@personaname")]
-        public string Personaname { get; set; }
+        public string personaname { get; set; }
 
         [JsonProperty("@profileurl")]
-        public string Profileurl { get; set; }
+        public string profileurl { get; set; }
 
         [JsonProperty("@avatar")]
-        public string Avatar { get; set; }
+        public string avatar { get; set; }
 
         [JsonProperty("@avatarmedium")]
-        public string Avatarmedium { get; set; }
+        public string avatarmedium { get; set; }
 
         [JsonProperty("@avatarfull")]
-        public string Avatarfull { get; set; }
+        public string avatarfull { get; set; }
 
         [JsonProperty("@avatarhash")]
-        public string Avatarhash { get; set; }
+        public string avatarhash { get; set; }
 
         [JsonProperty("@lastlogoff")]
-        public string Lastlogoff { get; set; }
+        public int lastlogoff { get; set; }
 
         [JsonProperty("@personastate")]
-        public string Personastate { get; set; }
+        public int personastate { get; set; }
 
         [JsonProperty("@primaryclanid")]
-        public string Primaryclanid { get; set; }
+        public string primaryclanid { get; set; }
 
         [JsonProperty("@timecreated")]
-        public string Timecreated { get; set; }
+        public int timecreated { get; set; }
 
         [JsonProperty("@personastateflags")]
-        public string Personastateflags { get; set; }
+        public int personastateflags { get; set; }
+
     }
+
 }

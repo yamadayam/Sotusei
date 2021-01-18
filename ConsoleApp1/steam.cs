@@ -18,7 +18,7 @@ namespace ConsoleApp1 {
             EndPointUrl = "https://api.steampowered.com";
             UserId = userId;
         }
-        public IEnumerable<UserInformation> GetUserInformation() {
+        public IEnumerable<JsonModel> GetUserInformation() {
             var parm = new Dictionary<string, string>();
             parm["Key"] = ConsumerKey;
             parm["steamids"] = UserId;
@@ -30,9 +30,9 @@ namespace ConsoleApp1 {
             var client = new WebClient() {
                 Encoding = Encoding.UTF8
             };
-            Json = client.DownloadString(url);
-
-            return JsonConvert.DeserializeObject<UserInformation[]>(Json);
+            Json = client.DownloadString(url).ToString();
+            
+            return JsonConvert.DeserializeObject<JsonModel>(Json);
         }
     }
 }
