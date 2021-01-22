@@ -1,8 +1,10 @@
 ﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -18,7 +20,7 @@ namespace ConsoleApp1 {
             EndPointUrl = "https://api.steampowered.com";
             UserId = userId;
         }
-        public IEnumerable<JsonModel> GetUserInformation() {
+        public IEnumerable<Player> GetUserInformation() {
             var parm = new Dictionary<string, string>();
             parm["Key"] = ConsumerKey;
             parm["steamids"] = UserId;
@@ -30,9 +32,10 @@ namespace ConsoleApp1 {
             var client = new WebClient() {
                 Encoding = Encoding.UTF8
             };
-            Json = client.DownloadString(url).ToString();
+            Json = client.DownloadString(url);
             
-            return JsonConvert.DeserializeObject<JsonModel>(Json);
+            var result = JsonConvert.DeserializeObject <Player>(Json);
+            return new List<Player>() { result };
         }
     }
 }

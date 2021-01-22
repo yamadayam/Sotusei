@@ -2,25 +2,25 @@
 using System.Collections.Generic;
 
 namespace ConsoleApp1 {
-
+    [JsonObject("JsonModel")]
     public partial class JsonModel {
         [JsonProperty("response")]
         public Response Response { get; set; }
     }
-
+    [JsonObject("Response")]
     public partial class Response {
         [JsonProperty("players")]
-        public List<Player> Players { get; set; }
+        public Player Players { get; set; }
     }
-
+    [JsonObject("Player")]
     public class Player {
         [JsonProperty("@steamid")]
         public string steamid { get; set; }
 
-        [JsonProperty("@communityvisibilitystate")]
+        [JsonProperty("communityvisibilitystate")]
         public int communityvisibilitystate { get; set; }
 
-        [JsonProperty("@profilestate")]
+        [JsonProperty("profilestate")]
         public int profilestate { get; set; }
 
         [JsonProperty("@personaname")]
@@ -41,19 +41,19 @@ namespace ConsoleApp1 {
         [JsonProperty("@avatarhash")]
         public string avatarhash { get; set; }
 
-        [JsonProperty("@lastlogoff")]
+        [JsonProperty("lastlogoff")]
         public int lastlogoff { get; set; }
 
-        [JsonProperty("@personastate")]
+        [JsonProperty("personastate")]
         public int personastate { get; set; }
 
         [JsonProperty("@primaryclanid")]
         public string primaryclanid { get; set; }
 
-        [JsonProperty("@timecreated")]
+        [JsonProperty("timecreated")]
         public int timecreated { get; set; }
 
-        [JsonProperty("@personastateflags")]
+        [JsonProperty("personastateflags")]
         public int personastateflags { get; set; }
 
     }

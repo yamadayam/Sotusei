@@ -17,11 +17,9 @@ namespace ConsoleApp1 {
             var api = new steam(consumerkey, userid);
 
             var userInformation = api.GetUserInformation();
-            Console.WriteLine(api.Json);
+            Console.WriteLine(userInformation);
 
-            foreach (var item in userInformation) {
-                Console.WriteLine(item.steamid);
-            }
+            
 
         }
         //static async Task<string> GetWebPageAsync(Uri uri) {
