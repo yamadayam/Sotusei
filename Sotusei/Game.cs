@@ -1,9 +1,11 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Media;
 
 namespace Sotusei {
     public class Information
@@ -11,6 +13,8 @@ namespace Sotusei {
         public string stkey { get; set; }
         public string stid { get; set; }
     }
+    
+
     // Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(myJsonResponse); 
     public class Player
     {

@@ -24,9 +24,13 @@ namespace Sotusei {
 
         private void tbSer_Click(object sender, RoutedEventArgs e)
         {
-
+            Image image = new Image();
+            BitmapImage imageSource = new BitmapImage(new Uri("Image/普通の家のアイコン.png"));
              
 
         }
+
+
+
     }
 }
