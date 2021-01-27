@@ -20,7 +20,7 @@ namespace Sotusei {
             UserId = userId;
         }
 
-        public IEnumerable<UserInformation> GetUserInformation(){
+        public Root GetUserInformation(){
             var parm = new Dictionary<string, string>();
             parm["Key"] = ConsumerKey;
             parm["steamids"] = UserId;            
@@ -34,7 +34,7 @@ namespace Sotusei {
             };
             Json = client.DownloadString(url);
 
-            return JsonConvert.DeserializeObject<UserInformation[]>(Json);
+            return JsonConvert.DeserializeObject<Root>(Json);
         }
 
 

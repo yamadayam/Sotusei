@@ -21,5 +21,12 @@ namespace Sotusei {
         public SerPage() {
             InitializeComponent();
         }
+
+        private void tbSer_Click(object sender, RoutedEventArgs e)
+        {
+
+             
+
+        }
     }
 }

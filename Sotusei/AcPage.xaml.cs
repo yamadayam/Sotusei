@@ -23,20 +23,17 @@ namespace Sotusei {
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e) {
-            
-
-        }
-
-        private void btapi_Click(object sender, RoutedEventArgs e) {
             var consumerkey = "84578F8035947FB06BFC5FB9E4902701";
             var userid = "76561199051966013";
             var api = new SteamApi(consumerkey, userid);
 
-            var userInformation = api.GetUserInformation();
-            tbname.Text = api.Json;
+            var steamapi = api.GetUserInformation();
 
-            var q = userInformation.Select(s => s.Personaname);
-
+            tbSteamid.Text = steamapi.response.players[0].steamid;
+            tbName.Text = steamapi.response.players[0].personaname;
+            Image image = new Image();
+            BitmapImage imageSource = new BitmapImage(new Uri(steamapi.response.players[0].avatarfull));
+            tbAvatar.Source = imageSource;
         }
     }
 }

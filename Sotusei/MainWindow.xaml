@@ -7,7 +7,7 @@
         xmlns:local="clr-namespace:Sotusei" 
         xmlns:iconPacks="clr-namespace:MahApps.Metro.IconPacks;assembly=MahApps.Metro.IconPacks"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="450">
+        Title="MainWindow" Height="550" Width="450">
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -26,7 +26,7 @@
         
         <Frame Name="myFrame" Grid.Column="1" NavigationUIVisibility="Hidden" Loaded="myFrame_Loaded"/>
         
-        <HamburgerMenu:HamburgerMenu Grid.Column="0" Background="Lightgray" MenuIconColor="Black" SelectionIndicatorColor="Black" MenuItemForeground="Black" HorizontalAlignment="Left">
+        <HamburgerMenu:HamburgerMenu Grid.Column="0" Background="White" MenuIconColor="Black" SelectionIndicatorColor="Black" MenuItemForeground="Black" HorizontalAlignment="Left">
             <HamburgerMenu:HamburgerMenuItem x:Name="Home" Icon="Image/普通の家のアイコン.png" Text="Home" PreviewMouseLeftButtonDown="Home_PreviewMouseLeftButtonDown" />
             <HamburgerMenu:HamburgerMenuItem x:Name="Search" Icon="Image/検索用アイコン.png" Text="Search" PreviewMouseLeftButtonDown="Search_PreviewMouseLeftButtonDown"/>
             <HamburgerMenu:HamburgerMenuItem x:Name="Account" Icon="Image/人物のアイコン.png" Text="Account" PreviewMouseLeftButtonDown="Account_PreviewMouseLeftButtonDown" />

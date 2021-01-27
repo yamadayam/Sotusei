@@ -5,11 +5,15 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Sotusei"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="400"
-      Title="AcPage" Loaded="Page_Loaded">
+      d:DesignHeight="550" d:DesignWidth="400"
+      Title="AcPage" Loaded="Page_Loaded" FontSize="20">
 
     <Grid>
         <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
@@ -21,8 +25,11 @@
         <TextBlock Grid.Row="0" HorizontalAlignment="Left" Margin="5" TextWrapping="Wrap"
                    FontSize="30" Text="Account" />
 
-        <TextBlock Grid.Row="1" Text="Name" Margin="20" HorizontalAlignment="Center" FontSize="20"/>
-        <TextBox x:Name="tbname" Grid.Row="1" Grid.Column="1" Margin="10,10,10,-240" />
-        <Button x:Name="btapi" Grid.Row="1" Grid.Column="0" Margin="10,0,10,-88" VerticalAlignment="Bottom" Height="48" Click="btapi_Click"/>
+        <TextBlock Grid.Row="1" Text="Avatar" Margin="20" HorizontalAlignment="Center" />
+        <Image x:Name="tbAvatar" Grid.Row="1" Grid.Column="1" Margin="10" />
+        <TextBlock Grid.Row="2" Text="SteamID" Margin="20" HorizontalAlignment="Center" />
+        <TextBlock x:Name="tbSteamid" Grid.Row="2" Grid.Column="1" Margin="10"  VerticalAlignment="Center"/>
+        <TextBlock Grid.Row="3" Text="Name" Margin="20" HorizontalAlignment="Center" />
+        <TextBlock x:Name="tbName" Grid.Row="3" Grid.Column="1" Margin="10" VerticalAlignment="Center" />
     </Grid>
 </Page>
